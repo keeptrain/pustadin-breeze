@@ -1,17 +1,33 @@
 {
     "version": 2,
-      "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.3" }
     },
-    "routes": [{
+    "routes": [
+    {
         "src": "/(.*)",
+        "dest": "/build/$1"
+    },
+    {
+        "src": "/api/(.*)",
         "dest": "/api/index.php"
+    },
+    {
+      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt|webmanifest))$",
+      "dest": "/public/$1"
     }],
+    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://yourprojectdomain.com",
+
+        "DB_CONNECTION": "mysql",
+        "DB_HOST": "e1pd3.h.filess.io",
+        "DB_PORT": "3307",
+        "DB_DATABASE": "rptra_writermen",
+        "DB_USERNAME": "rptra_writermen",
+        "DB_PASSWORD": "c2647420ec78b0be99e772332124058927ff2a65",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
