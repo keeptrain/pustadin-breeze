@@ -8,6 +8,8 @@
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
+    "buildCommand": "vite build",
+    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
@@ -18,7 +20,7 @@
         "DB_PORT": "3307",
         "DB_DATABASE": "rptra_writermen",
         "DB_USERNAME": "rptra_writermen",
-        "DB_PASSWORD": "c2647420ec78b0be99e772332124058927ff2a65",
+        "DB_PASSWORD": "c2647420ec78b0be99e772332124058927 ff2a65",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
